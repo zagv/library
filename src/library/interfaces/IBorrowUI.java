@@ -3,7 +3,10 @@ package library.interfaces;
 public interface IBorrowUI {
 
 	public void setState(EBorrowState state);
-	
+	/***
+	 * DisplayMemberDetails() function
+	 * @author vuq
+	 * */
 	public void displayMemberDetails(int memberID, String memberName, String memberPhone);
 
 	public void displayExistingLoan(String loanDetails);
