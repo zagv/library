@@ -10,7 +10,7 @@ import library.assignment3.Member;
 
 /**
  *
- * @author anuj
+ * @author zlatko
  */
 public class TestingMember {
     Member member;
