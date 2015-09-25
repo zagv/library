@@ -10,14 +10,14 @@ import library.assignment3.Member;
 
 /**
  *
- * @author zlatkopetrov
+ * @author anuj
  */
 public class TestingMember {
     Member member;
     Scanner scan = new Scanner(System.in);
     int id;
-    String firstName;
-    String lastName; 
+    String fName;
+    String lName; 
     String phone;
     String email;
 
@@ -27,14 +27,14 @@ public class TestingMember {
         id = scan.nextInt();
         scan.nextLine();
         System.out.print("Enter First Name: ");
-        firstName = scan.nextLine();
+        fName = scan.nextLine();
         System.out.print("Enter Last Name: ");
-        lastName = scan.nextLine();
+        lName = scan.nextLine();
         System.out.print("Enter Phone Number: ");
         phone = scan.nextLine();
         System.out.print("Enter Email: ");
         email = scan.nextLine();
-        member = new Member(id, firstName, lastName, phone, email);
+        member = new Member(id, fName, lName, phone, email);
         menu();
     }
     
