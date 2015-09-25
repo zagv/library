@@ -28,8 +28,8 @@ public class Member implements IMember {
             System.out.println("All fields are mandatory!!!");
         }
         this.id = id;
-        this.fName = fName;
-        this.lName = lName;
+        this.fName = firstName;
+        this.lName = lastName;
         this.phone = phone;
         this.email = email;
         this.loanList = new ArrayList<ILoan>();
