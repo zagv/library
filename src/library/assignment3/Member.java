@@ -9,12 +9,12 @@ import library.interfaces.entities.IMember;
 
 /**
  *
- * @author zlatkopetrov
+ * @author anuj
  */
 public class Member implements IMember {
     
-    private final String firstName;
-    private final String lastName;
+    private final String fName;
+    private final String lName;
     private final String phone;
     private final String email;
     private final int id;
@@ -28,17 +28,17 @@ public class Member implements IMember {
             System.out.println("All fields are mandatory!!!");
         }
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.fName = fName;
+        this.lName = lName;
         this.phone = phone;
         this.email = email;
         this.loanList = new ArrayList<ILoan>();
         this.totalFines = 0.0f;
         this.state = EMemberState.BORROWING_ALLOWED;
     }
-    private boolean validation (int id, String firstName, String lastName, String phone, String email){
-        return (id >0 && firstName != null && !firstName.isEmpty() &&
-                lastName !=null && !lastName.isEmpty() &&
+    private boolean validation (int id, String fName, String lName, String phone, String email){
+        return (id >0 && fName != null && !fName.isEmpty() &&
+                lName !=null && !lName.isEmpty() &&
                 phone != null && !phone.isEmpty() && 
                 email != null && !email.isEmpty());
     }
@@ -120,12 +120,12 @@ public class Member implements IMember {
 
     @Override
     public String getFirstName() {
-        return firstName;
+        return fName;
     }
 
     @Override
     public String getLastName() {
-        return lastName;
+        return lName;
     }
 
     @Override
@@ -157,7 +157,7 @@ public class Member implements IMember {
     
     public String toString(){
         return String.format("Id: %d\nName: %s %s, Contact Phone: %s, Email: %s, Outstanding Charges: %.2f", 
-                id, firstName,lastName,phone,email,totalFines);
+                id, fName,lName,phone,email,totalFines);
     }
     
 }
