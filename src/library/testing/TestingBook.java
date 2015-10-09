@@ -3,17 +3,8 @@
  */
 package library.testing;
 
-import static org.junit.Assert.*;
-
-import java.util.Scanner;
-
 import library.assignment3.Book;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import library.interfaces.entities.EBookState;
 
 /**
  * Test Testcases using JUnit Framework
@@ -28,6 +19,7 @@ public class TestingBook {
 	private String callNumber = "123456";
 	private Book book;
 	TestingBook testingBook;
+	private EBookState state;
 	
 	/**
 	 * @throws java.lang.Exception
@@ -68,5 +60,9 @@ public class TestingBook {
 		assertEquals(book.getAuthor(), this.author);
 		assertEquals(book.getCallNumber(), this.callNumber);
 	}
-
+	@Test
+	public void dispose()
+	{
+		
+	}
 }
